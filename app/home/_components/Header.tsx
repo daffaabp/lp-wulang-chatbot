@@ -22,10 +22,10 @@ const Header = () => {
 				{/* Navigation */}
 				<nav className="mx-auto">
 					<div className="flex items-center gap-8 rounded-md bg-white/80 backdrop-blur-sm border px-8 py-2 shadow-sm">
-						<NavLink href="/features">Features</NavLink>
 						<NavLink href="/about">About</NavLink>
+						<NavLink href="/products">Products</NavLink>
 						<NavLink href="/pricing">Pricing</NavLink>
-						<NavLink href="/integrations">Integrations</NavLink>
+						<NavLink href="/faq">FAQ</NavLink>
 					</div>
 				</nav>
 
