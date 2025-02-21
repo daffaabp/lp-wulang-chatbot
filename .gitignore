@@ -42,3 +42,10 @@ next-env.d.ts
 
 # image
 app/_images*
+/_notes
+/_plans
+/app/_components-explainer
+/app/_images
+/app/_explainer
+/app/_notes
+.cursorrules
