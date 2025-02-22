@@ -15,7 +15,7 @@ export default function HomePage() {
 	return (
 		<main className="min-h-screen">
 			<Header />
-			<div className="w-full max-w-7xl mx-auto px-4 pt-4 sm:px-6 lg:px-8">
+			<div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<Title />
 				<Hero />
 			</div>

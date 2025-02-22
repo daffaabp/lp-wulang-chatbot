@@ -293,13 +293,14 @@
   }
 
   .heroImageContainer {
-    max-width: 320px;
-    padding: 1.25rem;
+    max-width: 300px;
+    padding: 1rem;
   }
 
   .heroImage {
-    width: 80% !important;
-    margin-top: -35px;
+    width: 70% !important;
+    margin-top: -30px;
+    object-fit: contain !important;
   }
 
   .heroTitle {
@@ -332,13 +333,13 @@
   }
 
   .heroImageContainer {
-    max-width: 280px;
-    padding: 1rem;
+    max-width: 260px;
+    padding: 0.875rem;
   }
 
   .heroImage {
-    width: 85% !important;
-    margin-top: -30px;
+    width: 65% !important;
+    margin-top: -25px;
   }
 
   .humanVoiceCard p,
@@ -362,13 +363,13 @@
   }
 
   .heroImageContainer {
-    max-width: 240px;
-    padding: 0.875rem;
+    max-width: 220px;
+    padding: 0.75rem;
   }
 
   .heroImage {
-    width: 90% !important;
-    margin-top: -25px;
+    width: 60% !important;
+    margin-top: -20px;
   }
 
   .heroTitle {

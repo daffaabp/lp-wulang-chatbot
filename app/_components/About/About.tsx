@@ -19,6 +19,10 @@ const missions = [
 		id: "mission-4",
 		text: "Memberikan dukungan 24/7 untuk komunitas akademik",
 	},
+	{
+		id: "mission-5",
+		text: "Mendorong inovasi dan kolaborasi",
+	},
 ];
 
 const About = () => {
@@ -28,7 +32,7 @@ const About = () => {
 
 			<div className="container relative mx-auto px-4 sm:px-6">
 				{/* Header Section */}
-				<div className="text-center max-w-2xl mx-auto mb-8 md:mb-10">
+				<div className="text-center max-w-4xl mx-auto mb-8 md:mb-10">
 					<motion.h2
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
@@ -43,9 +47,12 @@ const About = () => {
 						transition={{ duration: 0.5, delay: 0.1 }}
 						className="text-base md:text-lg text-[#2D2B6B]/80 leading-[1.6]"
 					>
-						Wulang AI adalah asisten virtual cerdas dari Kelas Inovatif yang
-						membantu mahasiswa, dosen, dan peneliti dalam menghasilkan karya
-						ilmiah berkualitas.
+						Selamat datang di Wulang, platform inovatif berteknologi Artificial
+						Intellegence yang dirancang oleh Kelas Inovatif untuk merevolusi
+						cara mahasiswa, dosen, dan peneliti dalam menghasilkan karya ilmiah
+						berkualitas. Kami memahami betapa menantangnya proses penulisan
+						akademik, dan Wulang hadir sebagai solusi cerdas untuk mempermudah
+						setiap langkahnya.
 					</motion.p>
 				</div>
 
@@ -81,9 +88,10 @@ const About = () => {
 								</h3>
 							</div>
 							<p className="text-[#2D2B6B]/80 text-base leading-[1.7] pl-9">
-								Menjadi pemimpin dalam inovasi teknologi pendidikan dengan
-								menciptakan solusi AI yang membantu meningkatkan kualitas
-								penelitian dan penulisan akademik di Indonesia.
+								Menjadi platform AI terdepan yang memberikan solusi bagi
+								mahasiswa, dosen, dan peneliti dalam menghasilkan karya ilmiah
+								berkualitas tinggi, serta mendorong inovasi dan kolaborasi dalam
+								dunia akademik.
 							</p>
 
 							{/* Feature Section - Moved here */}
