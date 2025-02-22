@@ -9,7 +9,7 @@ export default function AboutPage() {
 				"Ditenagai oleh model AI terdepan seperti GPT-4, Deepseek, Qwen, dan lainnya dengan kemampuan pemahaman konteks yang mendalam dan respons cepat dan akurat",
 		},
 		{
-			title: "Fokus pada Kualitas Akademik",
+			title: "Fokus pada Kualitas Akademik", 
 			description:
 				"Pemahaman mendalam tentang standar penulisan ilmiah, menjaga integritas akademik, dan saran referensi yang relevan dan terpercaya",
 		},
@@ -96,7 +96,7 @@ export default function AboutPage() {
 						Keunggulan Wulang AI
 					</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-						{advantages.map((advantage, index) => (
+						{advantages.map((advantage) => (
 							<div
 								key={advantage.title}
 								className="bg-white p-8 rounded-lg shadow-md"
