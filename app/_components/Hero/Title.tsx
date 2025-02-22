@@ -1,5 +1,6 @@
 import { Arimo } from "next/font/google";
 import React from "react";
+import styles from "./title.module.css";
 
 const arimo = Arimo({
 	weight: ["400"],
@@ -9,15 +10,15 @@ const arimo = Arimo({
 
 export default function Title() {
 	return (
-		<div className="flex flex-col items-center text-center">
+		<div className={styles.titleContainer}>
 			{/* Top Title Group */}
-			<div className="flex items-center gap-2 text-[2.5rem] font-sulphur-point text-[#1E1B4B] font-semibold">
-				<span id="top_title_left">AI chat</span>
+			<div className={styles.titleGroup}>
+				<span className={styles.titleText}>AI chat</span>
 				{/* Sound Wave SVG */}
-				<div id="sound_svg" className="w-24">
+				<div className={styles.soundWave}>
 					<svg
 						viewBox="0 0 120 40"
-						className="w-full"
+						className={styles.soundWaveSvg}
 						aria-labelledby="soundWaveTitle"
 					>
 						<title id="soundWaveTitle">Sound wave visualization</title>
@@ -43,26 +44,17 @@ export default function Title() {
 						</g>
 					</svg>
 				</div>
-				<span id="top_title_right">that feels</span>
+				<span className={styles.titleText}>that feels</span>
 			</div>
 
 			{/* Bottom Title Group */}
-			<div className="flex items-center -mt-2 gap-2 text-[2.5rem] font-sulphur-point text-[#1E1B4B] font-semibold">
-				<span id="surpris">surprisingly</span>
-				<span
-					id="human"
-					className={`${arimo.className} rounded-full bg-gradient-to-r from-[#F8E3D0] to-[#E5D5F5] px-4 py-1 transform rotate-[-8deg] text-black`}
-				>
-					human
-				</span>
+			<div className={styles.titleGroup}>
+				<span className={styles.titleText}>surprisingly</span>
+				<span className={`${styles.humanText} ${arimo.className}`}>human</span>
 			</div>
 
 			{/* Button */}
-			<button
-				id="button_free"
-				type="button"
-				className="mt-4 rounded-full bg-[#1E1B4B] px-8 py-3 text-white font-medium hover:bg-[#2E2A5B] transition-colors"
-			>
+			<button type="button" className={styles.tryButton}>
 				TRY FOR FREE
 			</button>
 		</div>

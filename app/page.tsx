@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import Header from "./home/_components/Header";
-import Hero from "./home/_components/Hero";
-import Title from "./home/_components/Title";
-import Trusted from "./home/_components/Trusted";
+import About from "./_components/About/About";
+import Header from "./_components/Header/Header";
+import Hero from "./_components/Hero/Hero";
+import Title from "./_components/Hero/Title";
+import Trusted from "./_components/Trusted/Trusted";
 
 export const metadata: Metadata = {
 	title: "Wulang AI - Virtual Assistant for Academic Writing",
@@ -14,10 +15,11 @@ export default function HomePage() {
 	return (
 		<main className="min-h-screen">
 			<Header />
-			<div className="w-full max-w-7xl mx-auto px-4 pt-4 sm:px-6 lg:px-8">
+			<div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<Title />
 				<Hero />
 			</div>
+			<About />
 			<Trusted />
 		</main>
 	);

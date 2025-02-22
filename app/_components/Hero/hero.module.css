@@ -1,0 +1,416 @@
+.heroSection {
+  position: relative;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 500px) 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.leftSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3.5rem;
+}
+
+.rightSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.5rem;
+}
+
+.heroImageContainer {
+  position: relative;
+  background: linear-gradient(135deg, #E5D5F5 0%, #F8E3D0 100%);
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: 1.5rem;
+  max-width: 400px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 20px 40px rgba(30, 27, 75, 0.1);
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.heroImageContainer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 30%, rgba(229, 213, 245, 0.3) 70%);
+  pointer-events: none;
+}
+
+.heroImageContainer:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.heroImage {
+  width: 75% !important;
+  height: auto !important;
+  position: relative !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 20px 30px rgba(30, 27, 75, 0.2));
+  transform: translateY(0);
+  margin-top: -50px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.heroImageContainer:hover .heroImage {
+  transform: translateY(-0.5rem);
+}
+
+.heroTitle {
+  font-family: var(--font-sulphur-point);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1E1B4B;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 0.5s ease forwards;
+  z-index: 1;
+}
+
+/* Feature Items */
+.humanVoiceCard, .statsCard, .gptCard {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.humanVoiceCard {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.humanVoiceCard p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.humanVoiceCard p:first-of-type {
+  color: #1E1B4B;
+  font-size: 1.125rem;
+}
+
+.humanVoiceCard p:last-of-type {
+  color: #F97316;
+  font-size: 1.125rem;
+}
+
+.statsCard {
+  gap: 0.875rem;
+}
+
+.statsCard > div:first-child {
+  background: #10B981;
+  padding: 0.625rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statsCard > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.statsCard span.text-4xl {
+  color: #1E1B4B;
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.statsCard p {
+  color: #4B5563;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.gptCard {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.gptCard > div:first-child {
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+  padding: 0.625rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gptCard span {
+  color: #1E1B4B;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.interactingText {
+  font-family: var(--font-sulphur-point);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #1E1B4B;
+  max-width: 300px;
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Connection Lines */
+.humanVoiceCard::after {
+  content: '';
+  position: absolute;
+  right: -2rem;
+  top: 50%;
+  width: 4rem;
+  height: 2px;
+  background: linear-gradient(90deg, #E5D5F5 0%, transparent 100%);
+  transform-origin: left;
+  animation: expandRight 0.5s ease forwards;
+}
+
+.statsCard::after {
+  content: '';
+  position: absolute;
+  right: -3rem;
+  top: 50%;
+  width: 5rem;
+  height: 2px;
+  background: linear-gradient(90deg, #E5D5F5 0%, transparent 100%);
+  transform: rotate(-15deg);
+  transform-origin: left;
+  animation: expandRight 0.5s ease forwards 0.2s;
+}
+
+.gptCard::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 50%;
+  width: 4rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #E5D5F5 100%);
+  transform-origin: right;
+  animation: expandLeft 0.5s ease forwards 0.1s;
+}
+
+.interactingText::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: -4rem;
+  width: 2px;
+  height: 4rem;
+  background: linear-gradient(180deg, transparent 0%, #E5D5F5 100%);
+  animation: expandDown 0.5s ease forwards 0.3s;
+}
+
+/* Animations */
+@keyframes expandRight {
+  from { transform: scaleX(0); opacity: 0; }
+  to { transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes expandLeft {
+  from { transform: scaleX(0); opacity: 0; }
+  to { transform: scaleX(1); opacity: 1; }
+}
+
+@keyframes expandDown {
+  from { transform: scaleY(0); opacity: 0; }
+  to { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .heroSection {
+    padding: 3rem 1.5rem;
+    overflow-x: hidden;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .leftSection, .rightSection {
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .heroImageContainer {
+    transform: none !important;
+  }
+
+  .humanVoiceCard::after,
+  .statsCard::after,
+  .gptCard::before,
+  .interactingText::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .heroGrid {
+    gap: 2.5rem;
+  }
+
+  .heroImageContainer {
+    max-width: 300px;
+    padding: 1rem;
+  }
+
+  .heroImage {
+    width: 70% !important;
+    margin-top: -30px;
+    object-fit: contain !important;
+  }
+
+  .heroTitle {
+    font-size: 1.75rem;
+    margin: -8px 0 0.75rem;
+  }
+
+  .humanVoiceCard, .statsCard, .gptCard {
+    padding: 0.375rem;
+  }
+
+  .interactingText {
+    font-size: 1.125rem;
+    padding-left: 1.25rem;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding: 2rem 1rem;
+  }
+
+  .heroGrid {
+    gap: 2rem;
+  }
+
+  .leftSection, .rightSection {
+    gap: 2rem;
+  }
+
+  .heroImageContainer {
+    max-width: 260px;
+    padding: 0.875rem;
+  }
+
+  .heroImage {
+    width: 65% !important;
+    margin-top: -25px;
+  }
+
+  .humanVoiceCard p,
+  .statsCard p,
+  .gptCard span {
+    font-size: 1rem;
+  }
+
+  .statsCard span.text-4xl {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 1.75rem 0.875rem;
+  }
+
+  .heroGrid {
+    gap: 1.75rem;
+  }
+
+  .heroImageContainer {
+    max-width: 220px;
+    padding: 0.75rem;
+  }
+
+  .heroImage {
+    width: 60% !important;
+    margin-top: -20px;
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+    margin: -5px 0 0.5rem;
+  }
+
+  .humanVoiceCard p,
+  .statsCard p,
+  .gptCard span {
+    font-size: 0.9375rem;
+  }
+
+  .statsCard span.text-4xl {
+    font-size: 1.75rem;
+  }
+
+  .interactingText {
+    font-size: 1rem;
+    padding-left: 1rem;
+    max-width: 240px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+  .heroImageContainer:hover {
+    transform: none;
+  }
+
+  .heroImageContainer:hover .heroImage {
+    transform: none;
+  }
+}
+
+/* Animation Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+  .heroImage,
+  .heroImageContainer {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}

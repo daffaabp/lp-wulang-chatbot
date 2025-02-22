@@ -12,6 +12,13 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  padding-top: calc(56px + 30px); /* Mobile padding */
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-top: calc(64px + 30px); /* Desktop padding */
+  }
 }
 
 @layer base {
@@ -83,4 +90,35 @@ body {
   background-image: linear-gradient(to right, #f1f5f9 1px, transparent 1px),
     linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+@layer utilities {
+    .safe-area-inset-top {
+        padding-top: env(safe-area-inset-top);
+    }
+
+    .touch-manipulation {
+        touch-action: manipulation;
+    }
+}
+
+/* Custom animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
