@@ -82,10 +82,10 @@ const Header = () => {
 						shadow-sm
 					"
 					>
-						<NavLink href="/about">About</NavLink>
-						<NavLink href="/products">Products</NavLink>
-						<NavLink href="/pricing">Pricing</NavLink>
-						<NavLink href="/faq">FAQ</NavLink>
+						<NavLink href="#about">About</NavLink>
+						<NavLink href="#products">Products</NavLink>
+						<NavLink href="#pricing">Pricing</NavLink>
+						<NavLink href="#faq">FAQ</NavLink>
 					</div>
 				</nav>
 

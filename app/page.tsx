@@ -3,6 +3,7 @@ import About from "./_components/About/About";
 import Header from "./_components/Header/Header";
 import Hero from "./_components/Hero/Hero";
 import Title from "./_components/Hero/Title";
+import Products from "./_components/Products/Products";
 import Trusted from "./_components/Trusted/Trusted";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function HomePage() {
 				<Hero />
 			</div>
 			<About />
+			<Products />
 			<Trusted />
 		</main>
 	);

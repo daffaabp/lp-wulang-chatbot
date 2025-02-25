@@ -21,7 +21,7 @@ const avatars = [
 
 export default function Hero() {
 	return (
-		<section className={styles.heroSection}>
+		<section id="hero" className={styles.heroSection}>
 			<div className={styles.heroGrid}>
 				{/* Left Section */}
 				<div className={styles.leftSection}>
