@@ -184,10 +184,10 @@ const Header = () => {
 						p-8
 					"
 					>
-						<NavLink href="/about">About</NavLink>
-						<NavLink href="/products">Products</NavLink>
-						<NavLink href="/pricing">Pricing</NavLink>
-						<NavLink href="/faq">FAQ</NavLink>
+						<NavLink href="#about">About</NavLink>
+						<NavLink href="#products">Products</NavLink>
+						<NavLink href="#pricing">Pricing</NavLink>
+						<NavLink href="#faq">FAQ</NavLink>
 					</nav>
 				</div>
 			</div>
