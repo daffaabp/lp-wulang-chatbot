@@ -27,7 +27,7 @@ const missions = [
 
 const About = () => {
 	return (
-		<section className="relative w-full py-10 md:py-14 overflow-hidden">
+		<section id="about" className="relative w-full py-10 md:py-14 overflow-hidden">
 			<div className="absolute inset-0 bg-gradient-to-br from-[#F8F7FF] via-[#F3EEFF] to-[#F5EEFF] opacity-60" />
 
 			<div className="container relative mx-auto px-4 sm:px-6">
