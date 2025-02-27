@@ -2,41 +2,69 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { ReactNode } from "react";
+import { useEffect, useState } from "react";
 
 interface NavLinkProps {
 	href: string;
-	children: ReactNode;
+	children: React.ReactNode;
 }
 
-const NavLink = ({ href, children }: NavLinkProps) => {
+export default function NavLink({ href, children }: NavLinkProps) {
 	const pathname = usePathname();
-	const isActive = pathname === href;
+	const isHome = pathname === "/";
+	const [isActive, setIsActive] = useState(false);
+
+	// If we're not on home page and the href is a hash link,
+	// we need to navigate to home first
+	const fullHref = !isHome && href.startsWith("#") ? `/${href}` : href;
+
+	useEffect(() => {
+		if (!href.startsWith("#")) return;
+
+		const sectionId = href.slice(1); // Remove # from href
+		const section = document.getElementById(sectionId);
+
+		if (!section) return;
+
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				// Add some buffer to make the active state more natural
+				if (entry.isIntersecting) {
+					setIsActive(true);
+				} else {
+					setIsActive(false);
+				}
+			},
+			{
+				rootMargin: "-50% 0px -50% 0px", // Activate when section is in middle of viewport
+				threshold: 0,
+			},
+		);
+
+		observer.observe(section);
+
+		return () => {
+			observer.unobserve(section);
+		};
+	}, [href]);
 
 	return (
 		<Link
-			href={href}
+			href={fullHref}
 			className={`
-				relative
-				px-4 py-2
-				text-sm font-medium
-				md:text-base
+				px-4 py-1.5
+				text-[#1E1B4B] font-medium
+				hover:text-[#2D2B6B]
+				transition-all
 				rounded-full
-				transition-all duration-200
 				${
 					isActive
-						? "text-gray-900 bg-gray-100"
-						: "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+						? "bg-[#1E1B4B] text-white hover:text-white hover:bg-[#2D2B6B]"
+						: "hover:bg-gray-100 active:bg-gray-200"
 				}
-				md:px-4 md:py-2
-				mobile:px-6 mobile:py-3
-				focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
-				touch-manipulation
 			`}
 		>
 			{children}
 		</Link>
 	);
-};
-
-export default NavLink;
+}
