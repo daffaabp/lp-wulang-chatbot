@@ -21,6 +21,13 @@ const products = [
 		url: "https://chat.kelasinovatif.com",
 		gradient: "from-[#E5D5F5] via-[#ECE7F5] to-[#F3F0F5]",
 		iconBg: "bg-gradient-to-br from-blue-500 to-blue-600",
+		price: "Rp 1.499.000",
+		features: [
+			"Akses penuh ke AI Chat Assistant",
+			"Unlimited chat sessions",
+			"Template penulisan akademik",
+			"Ekspor hasil chat ke Word/PDF",
+		],
 	},
 	{
 		title: "Wulang Asisten",
@@ -30,6 +37,13 @@ const products = [
 		url: "https://asisten.kelasinovatif.com",
 		gradient: "from-[#F8E3D0] via-[#F5EBE0] to-[#F5F0E0]",
 		iconBg: "bg-gradient-to-br from-purple-500 to-purple-600",
+		price: "Rp 2.499.000",
+		features: [
+			"AI Writing Assistant",
+			"Analisis & saran perbaikan",
+			"Rekomendasi jurnal",
+			"Pemeriksaan plagiarisme",
+		],
 	},
 	{
 		title: "Wulang Voice",
@@ -39,6 +53,13 @@ const products = [
 		url: "https://voice.kelasinovatif.com",
 		gradient: "from-[#E5D5F5] via-[#F0E5F0] to-[#F8E3D0]",
 		iconBg: "bg-gradient-to-br from-orange-500 to-orange-600",
+		price: "Rp 1.999.000",
+		features: [
+			"Voice-to-text conversion",
+			"Multi-bahasa support",
+			"Transkripsi otomatis",
+			"Edit hasil transkripsi",
+		],
 	},
 	{
 		title: "Wulang Writer",
@@ -48,6 +69,13 @@ const products = [
 		url: "https://writer.kelasinovatif.com",
 		gradient: "from-[#F8E3D0] via-[#F0E5F0] to-[#E5D5F5]",
 		iconBg: "bg-gradient-to-br from-emerald-500 to-emerald-600",
+		price: "Rp 1.799.000",
+		features: [
+			"AI Content Generation",
+			"Grammar & Style Check",
+			"Citation Manager",
+			"Format Otomatis",
+		],
 	},
 	{
 		title: "Wulang Chat WA",
@@ -57,6 +85,13 @@ const products = [
 		url: "https://chatwa.kelasinovatif.com",
 		gradient: "from-[#E5D5F5] via-[#E8E0F0] to-[#F0E5F0]",
 		iconBg: "bg-gradient-to-br from-green-500 to-green-600",
+		price: "Rp 999.000",
+		features: [
+			"Integrasi WhatsApp",
+			"Quick Response 24/7",
+			"Share & Collaborate",
+			"Export ke Multiple Format",
+		],
 	},
 	{
 		title: "Wulang Office",
@@ -72,7 +107,10 @@ const products = [
 
 export default function Products() {
 	return (
-		<section id="products" className="py-16 md:py-24 overflow-hidden bg-gradient-to-b from-[#F6F6F6] via-[#F8F8F8] to-[#FFFFFF]">
+		<section
+			id="products"
+			className="py-16 md:py-24 overflow-hidden bg-gradient-to-b from-[#F6F6F6] via-[#F8F8F8] to-[#FFFFFF]"
+		>
 			<div className="container mx-auto px-4 md:px-6">
 				{/* Section Header */}
 				<div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
@@ -120,39 +158,80 @@ export default function Products() {
 									transition-all duration-300
 									group
 									font-poppins
+									min-h-[280px]
+									flex flex-col
 								`}
 							>
-								{/* Product Icon */}
-								<div
-									className={`
-										${product.iconBg} 
-										w-12 h-12
-										rounded-xl
-										flex items-center justify-center 
-										text-white 
-										mb-4
-										shadow-lg shadow-[#E5D5F5]/20
-										group-hover:scale-110
-										transition-transform duration-300
-									`}
-								>
-									{product.icon}
+								<div className="flex-grow">
+									{/* Product Icon */}
+									<div
+										className={`
+											${product.iconBg} 
+											w-12 h-12
+											rounded-xl
+											flex items-center justify-center 
+											text-white 
+											mb-4
+											shadow-lg shadow-[#E5D5F5]/20
+											group-hover:scale-110
+											transition-transform duration-300
+										`}
+									>
+										{product.icon}
+									</div>
+
+									{/* Product Title */}
+									<h3 className="text-xl md:text-2xl font-bold text-[#1E1B4B] mb-2 font-sulphur-point">
+										{product.title}
+									</h3>
+
+									{/* Product Description */}
+									<p className="text-[#4B5563] mb-4 font-poppins leading-relaxed line-clamp-3">
+										{product.description}
+									</p>
+
+									{/* Price & Features */}
+									{!product.comingSoon && (
+										<div className="space-y-4 mb-6">
+											<div className="flex items-baseline gap-1">
+												<span className="text-2xl font-bold text-[#1E1B4B]">
+													{product.price}
+												</span>
+												<span className="text-sm text-[#4B5563]">/bulan</span>
+											</div>
+											<ul className="space-y-2">
+												{product.features?.map((feature) => (
+													<li
+														key={feature}
+														className="flex items-center gap-2 text-sm text-[#4B5563]"
+													>
+														<svg
+															className="w-4 h-4 text-[#1E1B4B]"
+															fill="none"
+															viewBox="0 0 24 24"
+															stroke="currentColor"
+															aria-labelledby="checkIconTitle"
+														>
+															<title id="checkIconTitle">Check Icon</title>
+															<path
+																strokeLinecap="round"
+																strokeLinejoin="round"
+																strokeWidth={2}
+																d="M5 13l4 4L19 7"
+															/>
+														</svg>
+														{feature}
+													</li>
+												))}
+											</ul>
+										</div>
+									)}
 								</div>
 
-								{/* Product Title */}
-								<h3 className="text-xl md:text-2xl font-bold text-[#1E1B4B] mb-2 font-sulphur-point">
-									{product.title}
-								</h3>
-
-								{/* Product Description */}
-								<p className="text-[#4B5563] mb-4 font-poppins leading-relaxed">
-									{product.description}
-								</p>
-
 								{/* Call to Action */}
-								<div className="flex items-center text-[#1E1B4B] font-medium font-poppins">
+								<div className="flex items-center text-[#1E1B4B] font-medium font-poppins mt-auto pt-4 border-t border-[#E5D5F5]/20">
 									<span className="mr-2">
-										{product.comingSoon ? "Segera Hadir" : "Coba Sekarang"}
+										{product.comingSoon ? "Segera Hadir" : "Mulai Berlangganan"}
 									</span>
 									<ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
 								</div>

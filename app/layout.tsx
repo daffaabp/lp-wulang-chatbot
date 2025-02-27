@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Sulphur_Point } from "next/font/google";
 import "./globals.css";
+import Footer from "./_components/Footer/Footer";
+import Header from "./_components/Header/Header";
 
 const poppins = Poppins({
 	weight: ["400", "500", "600", "700"],
@@ -24,9 +26,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-}: Readonly<{
+}: {
 	children: React.ReactNode;
-}>) {
+}) {
 	return (
 		<html lang="en">
 			<body
@@ -36,7 +38,11 @@ export default function RootLayout({
 				<div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#F6F6F6,transparent)] pointer-events-none opacity-50" />
 
 				{/* Content */}
-				<div className="relative">{children}</div>
+				<div className="relative">
+					<Header />
+					{children}
+					<Footer />
+				</div>
 			</body>
 		</html>
 	);
