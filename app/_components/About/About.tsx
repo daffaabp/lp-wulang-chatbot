@@ -27,7 +27,10 @@ const missions = [
 
 const About = () => {
 	return (
-		<section id="about" className="relative w-full py-10 md:py-14 overflow-hidden">
+		<section
+			id="about"
+			className="relative w-full py-16 md:py-24 overflow-hidden"
+		>
 			<div className="absolute inset-0 bg-gradient-to-br from-[#F8F7FF] via-[#F3EEFF] to-[#F5EEFF] opacity-60" />
 
 			<div className="container relative mx-auto px-4 sm:px-6">
@@ -72,9 +75,9 @@ const About = () => {
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke="currentColor"
-										aria-labelledby="visionIconTitle"
+										aria-labelledby="checkIconTitle"
 									>
-										<title id="visionIconTitle">Vision Icon</title>
+										<title id="checkIconTitle">Check Icon</title>
 										<path
 											strokeLinecap="round"
 											strokeLinejoin="round"
@@ -94,7 +97,7 @@ const About = () => {
 								dunia akademik.
 							</p>
 
-							{/* Feature Section - Moved here */}
+							{/* Feature Section */}
 							<div className="pt-6 mt-6 border-t border-[#7C3AED]/10">
 								<div className="flex items-center gap-3 mb-2">
 									<div className="w-6 h-6 bg-[#7C3AED] bg-opacity-90 rounded-full flex items-center justify-center">
@@ -103,9 +106,9 @@ const About = () => {
 											fill="none"
 											viewBox="0 0 24 24"
 											stroke="currentColor"
-											aria-labelledby="featureIconTitle"
+											aria-labelledby="lightningIconTitle"
 										>
-											<title id="featureIconTitle">Feature Icon</title>
+											<title id="lightningIconTitle">Lightning Icon</title>
 											<path
 												strokeLinecap="round"
 												strokeLinejoin="round"
@@ -140,9 +143,9 @@ const About = () => {
 										fill="none"
 										viewBox="0 0 24 24"
 										stroke="currentColor"
-										aria-labelledby="missionIconTitle"
+										aria-labelledby="missionCheckIconTitle"
 									>
-										<title id="missionIconTitle">Mission Icon</title>
+										<title id="missionCheckIconTitle">Mission Check Icon</title>
 										<path
 											strokeLinecap="round"
 											strokeLinejoin="round"
