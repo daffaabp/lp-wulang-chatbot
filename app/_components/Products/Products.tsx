@@ -129,21 +129,14 @@ function PreviewModal({
 	};
 
 	return (
-		<motion.dialog
-			initial={{ opacity: 0, scale: 0.95 }}
-			animate={{ opacity: 1, scale: 1 }}
-			exit={{ opacity: 0, scale: 0.95 }}
-			transition={{ duration: 0.2 }}
+		<dialog
 			open
 			className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 w-full h-full m-0 p-0 flex items-center justify-center"
 			onClick={onClose}
 			onKeyDown={handleKeyDown}
 			aria-labelledby="modal-title"
 		>
-			<motion.div
-				initial={{ y: 20 }}
-				animate={{ y: 0 }}
-				transition={{ duration: 0.3, delay: 0.1 }}
+			<div
 				className="relative bg-white rounded-2xl max-w-3xl w-[calc(100%-32px)] md:w-[calc(100%-48px)] lg:w-[calc(100%-64px)] shadow-2xl mx-4 md:mx-6 lg:mx-8 overflow-hidden"
 				onClick={(e) => e.stopPropagation()}
 				onKeyDown={(e) => e.stopPropagation()}
@@ -183,8 +176,8 @@ function PreviewModal({
 					<div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent"></div>
 					<div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent"></div>
 				</div>
-			</motion.div>
-		</motion.dialog>
+			</div>
+		</dialog>
 	);
 }
 
