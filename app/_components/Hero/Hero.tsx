@@ -74,9 +74,14 @@ export default function Hero() {
 						<div className="bg-gradient-to-br from-orange-500 to-orange-600 p-2 rounded-full">
 							<Zap className="text-white h-6 w-6" />
 						</div>
-						<span className="font-semibold text-lg text-[#1E1B4B]">
-							Powered by GPT-4
-						</span>
+						<div className="flex flex-col">
+							<span className="font-semibold text-lg text-[#1E1B4B]">
+								Enhanced by GPT-4
+							</span>
+							<span className="text-gray-600 text-sm">
+								Deepseek & More AI Models
+							</span>
+						</div>
 					</div>
 
 					<p className={styles.interactingText}>

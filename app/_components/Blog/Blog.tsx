@@ -352,17 +352,6 @@ export default function Blog() {
 												</Link>
 											))}
 										</div>
-
-										{/* View All Link */}
-										<div className="text-center mt-8">
-											<Link
-												href={`/blog/category/${category.id}`}
-												className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[#E5D5F5]/20 text-[#1E1B4B] font-medium hover:bg-gray-50 transition-colors shadow-sm"
-											>
-												<span>Lihat Semua Artikel {category.title}</span>
-												<ArrowRight className="w-4 h-4" />
-											</Link>
-										</div>
 									</motion.div>
 								),
 						)}

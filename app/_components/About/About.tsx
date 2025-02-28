@@ -62,12 +62,8 @@ const About = () => {
 				{/* Content Grid */}
 				<div className="grid md:grid-cols-2 gap-8 md:gap-16 max-w-4xl mx-auto">
 					{/* Vision Section */}
-					<motion.div
-						initial={{ opacity: 0, x: -20 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.5 }}
-					>
-						<motion.div className="space-y-3">
+					<div>
+						<div className="space-y-3">
 							<div className="flex items-center gap-3 mb-2">
 								<div className="w-6 h-6 bg-[#7C3AED] bg-opacity-90 rounded-full flex items-center justify-center">
 									<svg
@@ -126,16 +122,12 @@ const About = () => {
 									terbaik dalam penulisan akademik Anda.
 								</p>
 							</div>
-						</motion.div>
-					</motion.div>
+						</div>
+					</div>
 
 					{/* Mission Section */}
-					<motion.div
-						initial={{ opacity: 0, x: 20 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.5 }}
-					>
-						<motion.div className="space-y-3">
+					<div>
+						<div className="space-y-3">
 							<div className="flex items-center gap-3 mb-2">
 								<div className="w-6 h-6 bg-[#7C3AED] bg-opacity-90 rounded-full flex items-center justify-center">
 									<svg
@@ -170,8 +162,8 @@ const About = () => {
 									</li>
 								))}
 							</ul>
-						</motion.div>
-					</motion.div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

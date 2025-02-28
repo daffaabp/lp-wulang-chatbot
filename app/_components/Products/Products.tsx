@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import {
 	CheckCircle2,
 	Eye,
@@ -21,7 +22,7 @@ const products = [
 		description:
 			"Platform percakapan AI interaktif untuk bantuan penulisan karya ilmiah dengan teknologi NLP canggih.",
 		icon: <MessageSquare className="w-6 h-6" />,
-		url: "https://chat.kelasinovatif.com",
+		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
 		iconBg: "bg-gradient-to-br from-blue-500 to-indigo-600",
 		price: "1.499K",
 		features: [
@@ -37,7 +38,7 @@ const products = [
 		description:
 			"Suite tools AI untuk membantu dari proposal hingga kerangka tulisan dengan pendekatan komprehensif.",
 		icon: <Sparkles className="w-6 h-6" />,
-		url: "https://asisten.kelasinovatif.com",
+		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
 		iconBg: "bg-gradient-to-br from-purple-500 to-pink-600",
 		price: "2.499K",
 		features: [
@@ -53,7 +54,7 @@ const products = [
 		description:
 			"Interaksi suara intuitif untuk pengalaman penulisan yang lebih natural dan dinamis.",
 		icon: <Mic className="w-6 h-6" />,
-		url: "https://voice.kelasinovatif.com",
+		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
 		iconBg: "bg-gradient-to-br from-orange-500 to-amber-600",
 		price: "1.999K",
 		features: [
@@ -69,7 +70,7 @@ const products = [
 		description:
 			"Aplikasi AI untuk pembuatan konten akademik dengan cepat dan efisien melalui instruksi sederhana.",
 		icon: <Pen className="w-6 h-6" />,
-		url: "https://writer.kelasinovatif.com",
+		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
 		iconBg: "bg-gradient-to-br from-emerald-500 to-teal-600",
 		price: "1.799K",
 		features: [
@@ -85,7 +86,7 @@ const products = [
 		description:
 			"Chatbot AI terintegrasi dengan WhatsApp untuk kolaborasi penulisan ilmiah yang lebih mudah dan familiar.",
 		icon: <Smartphone className="w-6 h-6" />,
-		url: "https://chatwa.kelasinovatif.com",
+		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
 		iconBg: "bg-gradient-to-br from-green-500 to-emerald-600",
 		price: "999K",
 		features: [
@@ -101,7 +102,7 @@ const products = [
 		description:
 			"Aplikasi desktop untuk pengalaman penulisan karya ilmiah yang lebih powerful. (Coming Soon)",
 		icon: <Monitor className="w-6 h-6" />,
-		url: "https://office.kelasinovatif.com",
+		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
 		iconBg: "bg-gradient-to-br from-gray-600 to-slate-700",
 		comingSoon: true,
 		image: "/images/wulang-office.PNG",
@@ -128,53 +129,62 @@ function PreviewModal({
 	};
 
 	return (
-		<dialog
+		<motion.dialog
+			initial={{ opacity: 0, scale: 0.95 }}
+			animate={{ opacity: 1, scale: 1 }}
+			exit={{ opacity: 0, scale: 0.95 }}
+			transition={{ duration: 0.2 }}
 			open
-			className="fixed inset-0 bg-black/50 z-50 w-full h-full m-0 p-0 flex items-center justify-center"
+			className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 w-full h-full m-0 p-0 flex items-center justify-center"
 			onClick={onClose}
 			onKeyDown={handleKeyDown}
 			aria-labelledby="modal-title"
 		>
-			<div
-				className="relative bg-white rounded-2xl max-w-3xl w-[calc(100%-32px)] md:w-[calc(100%-48px)] lg:w-[calc(100%-64px)] shadow-xl mx-4 md:mx-6 lg:mx-8"
+			<motion.div
+				initial={{ y: 20 }}
+				animate={{ y: 0 }}
+				transition={{ duration: 0.3, delay: 0.1 }}
+				className="relative bg-white rounded-2xl max-w-3xl w-[calc(100%-32px)] md:w-[calc(100%-48px)] lg:w-[calc(100%-64px)] shadow-2xl mx-4 md:mx-6 lg:mx-8 overflow-hidden"
 				onClick={(e) => e.stopPropagation()}
 				onKeyDown={(e) => e.stopPropagation()}
 			>
-				{/* Header */}
-				<div className="relative flex items-center justify-between p-4 border-b">
-					<div className="absolute inset-x-0 top-1/2 -translate-y-1/2">
+				{/* Header with Gradient */}
+				<div className="relative bg-gradient-to-r from-[#1E1B4B] to-[#2D2A6B] text-white">
+					<div className="absolute inset-0 bg-[url('/images/pattern-light.svg')] opacity-10"></div>
+					<div className="relative flex items-center justify-between p-3">
 						<h3
 							id="modal-title"
-							className="text-xl font-bold text-[#1E1B4B] text-center"
+							className="text-lg md:text-xl font-bold text-center w-full"
 						>
 							{title}
 						</h3>
+						<button
+							type="button"
+							onClick={onClose}
+							className="absolute right-2 p-1.5 hover:bg-white/10 rounded-full transition-colors"
+							aria-label="Tutup preview"
+						>
+							<X className="w-4 h-4 text-white" />
+						</button>
 					</div>
-					<div className="invisible">
-						<span className="text-xl">{title}</span>
-					</div>
-					<button
-						type="button"
-						onClick={onClose}
-						className="relative z-10 p-2 hover:bg-gray-100 rounded-full transition-colors"
-						aria-label="Tutup preview"
-					>
-						<X className="w-5 h-5" />
-					</button>
 				</div>
 
-				{/* Image Preview */}
-				<div className="relative aspect-[16/9] bg-gray-100">
+				{/* Image Preview with Gradient Overlay */}
+				<div className="relative aspect-[16/9] bg-gradient-to-b from-gray-50 to-gray-100">
+					<div className="absolute inset-0 bg-[url('/images/pattern-light.svg')] opacity-5"></div>
 					<Image
 						src={image}
 						alt={`Preview ${title}`}
 						fill
-						className="object-contain"
+						className="object-contain p-4"
 						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
 					/>
+					{/* Gradient Overlays */}
+					<div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent"></div>
+					<div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent"></div>
 				</div>
-			</div>
-		</dialog>
+			</motion.div>
+		</motion.dialog>
 	);
 }
 
@@ -190,13 +200,23 @@ export default function Products() {
 				<div className="container mx-auto px-4 md:px-6">
 					{/* Section Header */}
 					<div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-						<h2 className="text-3xl md:text-4xl font-bold text-[#1E1B4B] mb-4 font-sulphur-point">
+						<motion.h2
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5 }}
+							className="text-3xl md:text-4xl font-bold text-[#1E1B4B] mb-4 font-sulphur-point"
+						>
 							Produk Wulang AI
-						</h2>
-						<p className="text-[#4B5563] text-lg font-poppins">
+						</motion.h2>
+						<motion.p
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, delay: 0.1 }}
+							className="text-[#4B5563] text-lg font-poppins"
+						>
 							Rangkaian solusi AI terpadu untuk membantu penulisan karya ilmiah
 							Anda
-						</p>
+						</motion.p>
 					</div>
 
 					{/* Products Grid */}
