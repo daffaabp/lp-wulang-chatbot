@@ -30,7 +30,7 @@ const products = [
 			"Template penulisan akademik",
 			"Ekspor hasil chat ke Word/PDF",
 		],
-		image: "/images/wulang-chat.png",
+		image: "/images/wulang-chat.PNG",
 	},
 	{
 		title: "Wulang Asisten",
@@ -46,7 +46,7 @@ const products = [
 			"Rekomendasi jurnal",
 			"Pemeriksaan plagiarisme",
 		],
-		image: "/images/wulang-chat.png",
+		image: "/images/wulang-chat.PNG",
 	},
 	{
 		title: "Wulang Voice",
@@ -62,7 +62,7 @@ const products = [
 			"Transkripsi otomatis",
 			"Edit hasil transkripsi",
 		],
-		image: "/images/wulang-voice.png",
+		image: "/images/wulang-voice.PNG",
 	},
 	{
 		title: "Wulang Writer",
@@ -78,7 +78,7 @@ const products = [
 			"Citation Manager",
 			"Format Otomatis",
 		],
-		image: "/images/wulang-chat.png",
+		image: "/images/wulang-chat.PNG",
 	},
 	{
 		title: "Wulang Chat WA",
@@ -94,7 +94,7 @@ const products = [
 			"Share & Collaborate",
 			"Export ke Multiple Format",
 		],
-		image: "/images/wulang-chatwa.png",
+		image: "/images/wulang-chatwa.PNG",
 	},
 	{
 		title: "Wulang Office",
@@ -104,7 +104,7 @@ const products = [
 		url: "https://office.kelasinovatif.com",
 		iconBg: "bg-gradient-to-br from-gray-600 to-slate-700",
 		comingSoon: true,
-		image: "/images/wulang-office.png",
+		image: "/images/wulang-office.PNG",
 	},
 ];
 
