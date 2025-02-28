@@ -44,7 +44,6 @@ const faqs = [
 	},
 ];
 
-
 export default function FAQ() {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -59,7 +58,7 @@ export default function FAQ() {
 						transition={{ duration: 0.5 }}
 						className="text-3xl md:text-4xl font-bold text-[#1E1B4B] mb-4 font-sulphur-point"
 					>
-						Pertanyaan yang Sering Diajukan
+						FAQ
 					</motion.h2>
 					<motion.p
 						initial={{ opacity: 0, y: 20 }}
@@ -74,11 +73,8 @@ export default function FAQ() {
 				{/* FAQ List */}
 				<div className="max-w-3xl mx-auto space-y-4">
 					{faqs.map((faq, index) => (
-						<motion.div
+						<div
 							key={faq.id}
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, delay: index * 0.1 }}
 							className="border border-[#E5D5F5]/20 rounded-xl overflow-hidden"
 						>
 							<button
@@ -110,7 +106,7 @@ export default function FAQ() {
 									{faq.answer}
 								</div>
 							</div>
-						</motion.div>
+						</div>
 					))}
 				</div>
 			</div>

@@ -33,7 +33,7 @@
   border-radius: 2rem;
   overflow: hidden;
   padding: 1.5rem;
-  max-width: 400px;
+  max-width: 350px;
   aspect-ratio: 1;
   margin: 0 auto;
   display: flex;
@@ -41,8 +41,6 @@
   align-items: center;
   justify-content: flex-start;
   box-shadow: 0 20px 40px rgba(30, 27, 75, 0.1);
-  transform: perspective(1000px) rotateY(-5deg);
-  transition: transform 0.3s ease;
 }
 
 .heroImageContainer::before {
@@ -53,24 +51,14 @@
   pointer-events: none;
 }
 
-.heroImageContainer:hover {
-  transform: perspective(1000px) rotateY(0deg);
-}
-
 .heroImage {
-  width: 75% !important;
+  width: 65% !important;
   height: auto !important;
   position: relative !important;
   object-fit: contain !important;
   filter: drop-shadow(0 20px 30px rgba(30, 27, 75, 0.2));
-  transform: translateY(0);
-  margin-top: -50px;
-  transition: transform 0.3s ease;
+  margin-top: -40px;
   z-index: 1;
-}
-
-.heroImageContainer:hover .heroImage {
-  transform: translateY(-0.5rem);
 }
 
 .heroTitle {
@@ -153,8 +141,12 @@
 
 .gptCard {
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.875rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .gptCard > div:first-child {
@@ -164,12 +156,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.gptCard span {
+.gptCard span:first-of-type {
   color: #1E1B4B;
   font-size: 1.125rem;
   font-weight: 600;
+  line-height: 1.25;
+}
+
+.gptCard span:last-of-type {
+  margin-top: 0.125rem;
+  line-height: 1.25;
 }
 
 .interactingText {
@@ -179,74 +178,9 @@
   color: #1E1B4B;
   max-width: 300px;
   position: relative;
-  padding-left: 2rem;
-}
-
-/* Connection Lines */
-.humanVoiceCard::after {
-  content: '';
-  position: absolute;
-  right: -2rem;
-  top: 50%;
-  width: 4rem;
-  height: 2px;
-  background: linear-gradient(90deg, #E5D5F5 0%, transparent 100%);
-  transform-origin: left;
-  animation: expandRight 0.5s ease forwards;
-}
-
-.statsCard::after {
-  content: '';
-  position: absolute;
-  right: -3rem;
-  top: 50%;
-  width: 5rem;
-  height: 2px;
-  background: linear-gradient(90deg, #E5D5F5 0%, transparent 100%);
-  transform: rotate(-15deg);
-  transform-origin: left;
-  animation: expandRight 0.5s ease forwards 0.2s;
-}
-
-.gptCard::before {
-  content: '';
-  position: absolute;
-  left: -2rem;
-  top: 50%;
-  width: 4rem;
-  height: 2px;
-  background: linear-gradient(90deg, transparent 0%, #E5D5F5 100%);
-  transform-origin: right;
-  animation: expandLeft 0.5s ease forwards 0.1s;
-}
-
-.interactingText::before {
-  content: '';
-  position: absolute;
-  left: -1rem;
-  top: -4rem;
-  width: 2px;
-  height: 4rem;
-  background: linear-gradient(180deg, transparent 0%, #E5D5F5 100%);
-  animation: expandDown 0.5s ease forwards 0.3s;
 }
 
 /* Animations */
-@keyframes expandRight {
-  from { transform: scaleX(0); opacity: 0; }
-  to { transform: scaleX(1); opacity: 1; }
-}
-
-@keyframes expandLeft {
-  from { transform: scaleX(0); opacity: 0; }
-  to { transform: scaleX(1); opacity: 1; }
-}
-
-@keyframes expandDown {
-  from { transform: scaleY(0); opacity: 0; }
-  to { transform: scaleY(1); opacity: 1; }
-}
-
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -269,17 +203,6 @@
   .leftSection, .rightSection {
     align-items: center;
     gap: 2.5rem;
-  }
-
-  .heroImageContainer {
-    transform: none !important;
-  }
-
-  .humanVoiceCard::after,
-  .statsCard::after,
-  .gptCard::before,
-  .interactingText::before {
-    display: none;
   }
 }
 
@@ -344,7 +267,7 @@
 
   .humanVoiceCard p,
   .statsCard p,
-  .gptCard span {
+  .gptCard span:first-of-type {
     font-size: 1rem;
   }
 
@@ -379,7 +302,7 @@
 
   .humanVoiceCard p,
   .statsCard p,
-  .gptCard span {
+  .gptCard span:first-of-type {
     font-size: 0.9375rem;
   }
 
