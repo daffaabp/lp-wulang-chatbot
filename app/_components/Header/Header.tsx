@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import NavLink from "./Navlink";
 
@@ -29,6 +30,12 @@ const Header = () => {
 		document.body.style.overflow = !isOpen ? "hidden" : "auto";
 	};
 
+	// Handle menu close
+	const closeMenu = () => {
+		setIsOpen(false);
+		document.body.style.overflow = "auto";
+	};
+
 	return (
 		<>
 			{/* Mobile Menu Overlay */}
@@ -45,10 +52,18 @@ const Header = () => {
 			>
 				{/* Mobile Menu Content */}
 				<nav className="h-[100dvh] w-full flex flex-col items-center justify-center space-y-8 p-8">
-					<NavLink href="#about">About</NavLink>
-					<NavLink href="#products">Products</NavLink>
-					<NavLink href="#blog">Blog</NavLink>
-					<NavLink href="#faq">FAQ</NavLink>
+					<NavLink href="#about" onNavigate={closeMenu}>
+						About
+					</NavLink>
+					<NavLink href="#products" onNavigate={closeMenu}>
+						Products
+					</NavLink>
+					<NavLink href="#blog" onNavigate={closeMenu}>
+						Blog
+					</NavLink>
+					<NavLink href="#faq" onNavigate={closeMenu}>
+						FAQ
+					</NavLink>
 				</nav>
 			</div>
 
@@ -61,8 +76,11 @@ const Header = () => {
 			>
 				<div className="container mx-auto flex items-center h-[56px] md:h-[64px] px-4 md:px-6 lg:px-8 relative">
 					{/* Logo Section - Always Visible */}
-					<div className="flex-shrink-0 flex items-center gap-2">
-						<div className="w-8 h-8 md:w-10 md:h-10 relative transition-transform duration-200 hover:scale-105">
+					<Link
+						href="/"
+						className="flex-shrink-0 flex items-center gap-2 group transition-opacity duration-200 hover:opacity-90"
+					>
+						<div className="w-8 h-8 md:w-10 md:h-10 relative transition-transform duration-200 group-hover:scale-105">
 							<Image
 								src="/images/wulangai2.jpg"
 								alt="Wulang AI Logo"
@@ -71,10 +89,10 @@ const Header = () => {
 								priority
 							/>
 						</div>
-						<span className="text-xl md:text-2xl font-bold text-[#1E1B4B] font-sulphur-point">
+						<span className="text-xl md:text-2xl font-bold text-[#1E1B4B] font-sulphur-point group-hover:text-[#2D2B6B] transition-colors">
 							Wulang
 						</span>
-					</div>
+					</Link>
 
 					{/* Desktop Navigation - Centered */}
 					<nav className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">

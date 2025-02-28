@@ -7,9 +7,10 @@ import { useEffect, useState } from "react";
 interface NavLinkProps {
 	href: string;
 	children: React.ReactNode;
+	onNavigate?: () => void;
 }
 
-export default function NavLink({ href, children }: NavLinkProps) {
+export default function NavLink({ href, children, onNavigate }: NavLinkProps) {
 	const pathname = usePathname();
 	const isHome = pathname === "/";
 	const [isActive, setIsActive] = useState(false);
@@ -48,9 +49,17 @@ export default function NavLink({ href, children }: NavLinkProps) {
 		};
 	}, [href]);
 
+	const handleClick = () => {
+		// Call onNavigate callback if provided
+		if (onNavigate) {
+			onNavigate();
+		}
+	};
+
 	return (
 		<Link
 			href={fullHref}
+			onClick={handleClick}
 			className={`
 				px-4 py-1.5
 				text-[#1E1B4B] font-medium
