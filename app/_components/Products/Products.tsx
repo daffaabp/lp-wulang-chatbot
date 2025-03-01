@@ -47,7 +47,7 @@ const products = [
 			"Rekomendasi jurnal",
 			"Pemeriksaan plagiarisme",
 		],
-		image: "/images/wulang-chat.PNG",
+		image: "/images/wulang-asisten.PNG",
 	},
 	{
 		title: "Wulang Voice",
@@ -79,7 +79,7 @@ const products = [
 			"Citation Manager",
 			"Format Otomatis",
 		],
-		image: "/images/wulang-chat.PNG",
+		image: "/images/remove-bg/wulang2.png",
 	},
 	{
 		title: "Wulang Chat WA",

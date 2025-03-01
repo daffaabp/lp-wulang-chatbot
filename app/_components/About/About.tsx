@@ -53,8 +53,7 @@ const About = () => {
 						Selamat datang di Wulang, platform inovatif berteknologi Artificial
 						Intellegence yang dirancang oleh Kelas Inovatif untuk merevolusi
 						cara mahasiswa, dosen, dan peneliti dalam menghasilkan karya ilmiah
-						berkualitas. Kami memahami betapa menantangnya proses penulisan
-						akademik, dan Wulang hadir sebagai solusi cerdas untuk mempermudah
+						berkualitas. Wulang hadir sebagai solusi cerdas untuk mempermudah
 						setiap langkahnya.
 					</motion.p>
 				</div>
