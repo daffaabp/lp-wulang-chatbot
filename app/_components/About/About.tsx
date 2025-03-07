@@ -2,29 +2,6 @@
 
 import { motion } from "framer-motion";
 
-const missions = [
-	{
-		id: "mission-1",
-		text: "Menyediakan akses ke teknologi AI canggih untuk mendukung penulisan akademik",
-	},
-	{
-		id: "mission-2",
-		text: "Memastikan integritas dan kualitas karya ilmiah tetap terjaga",
-	},
-	{
-		id: "mission-3",
-		text: "Meningkatkan efisiensi dan efektivitas proses penulisan akademik",
-	},
-	{
-		id: "mission-4",
-		text: "Memberikan dukungan 24/7 untuk komunitas akademik",
-	},
-	{
-		id: "mission-5",
-		text: "Mendorong inovasi dan kolaborasi",
-	},
-];
-
 const About = () => {
 	return (
 		<section
