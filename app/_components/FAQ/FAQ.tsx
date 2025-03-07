@@ -1,7 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronDown, Clock, Globe, Lock, Shield, Users } from "lucide-react";
+import {
+	ChevronDown,
+	Clock,
+	Globe,
+	Shield,
+	Sparkles,
+	Users,
+} from "lucide-react";
 import { useState } from "react";
 
 const faqs = [
@@ -30,8 +37,15 @@ const faqs = [
 		id: "satisfaction-guarantee",
 		question: "Bagaimana cara berlangganan wulang?",
 		answer:
-			"Saat ini Wulang sedang dalam masa promo dan bisa diakses GRATIS! Pilih produk yang Anda inginkan dan mulai gunakan. Nantinya akan tersedia berbagai pilihan paket membership yang bisa disesuaikan dengan kebutuhan Anda.",
+			"Saat ini Wulang sedang dalam masa promo dan bisa diakses GRATIS! Pilih produk yang Anda inginkan dan mulai gunakan. Namun nantinya akan tersedia berbagai pilihan paket membership yang bisa disesuaikan dengan kebutuhan Anda.",
 		icon: <Shield className="w-5 h-5" />,
+	},
+	{
+		id: "unique-features",
+		question: "Apa yang membuat Wulang berbeda dari AI lainnya?",
+		answer:
+			"Wulang dilatih khusus untuk dunia akademik dan berkomunikasi dengan bahasa yang manusiawi. Seperti asisten pribadi yang memahami kebutuhan spesifik dalam penulisan skripsi, tesis, dan karya ilmiah Anda.",
+		icon: <Sparkles className="w-5 h-5" />,
 	},
 ];
 
