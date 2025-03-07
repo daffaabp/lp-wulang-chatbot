@@ -7,40 +7,31 @@ import { useState } from "react";
 const faqs = [
 	{
 		id: "mastery-time",
-		question: "Berapa lama waktu yang dibutuhkan untuk menguasai Wulang AI?",
+		question: "Bagaimana cara menggunakan wulang?",
 		answer:
-			"Wulang AI dirancang dengan antarmuka yang sangat intuitif. Pengguna biasanya dapat mulai menggunakan fitur dasar dalam 5-10 menit, dan menguasai fitur lanjutan dalam 1-2 hari pemakaian.",
+			"Sangat mudah! Pilih platform yang Anda inginkan (Chat, Voice, atau WhatsApp), dan langsung mulai interaksi. Tidak perlu instalasi, dalam 5 menit Anda sudah bisa menulis dengan bantuan AI!",
 		icon: <Clock className="w-5 h-5" />,
 	},
 	{
 		id: "journal-recommendation",
-		question:
-			"Apakah Wulang AI bisa membantu saya menemukan jurnal yang sesuai untuk publikasi?",
+		question: "Apakah wulang menyimpan history chat?",
 		answer:
-			"Ya! Wulang AI memiliki database jurnal terupdate dan dapat merekomendasikan jurnal yang paling sesuai berdasarkan topik, scope, dan impact factor yang diinginkan.",
+			"Yap! Semua percakapan tersimpan dengan aman di sistem kami dan dapat Anda akses kembali kapan saja untuk melanjutkan diskusi sebelumnya.",
 		icon: <Globe className="w-5 h-5" />,
 	},
 	{
 		id: "technical-support",
-		question:
-			"Bagaimana jika saya mengalami kendala teknis saat menggunakan Wulang AI?",
+		question: "Kenapa wulang berbayar?",
 		answer:
-			"Tim support kami siap membantu 24/7 melalui live chat, email, atau WhatsApp. Rata-rata waktu respons kami kurang dari 15 menit untuk setiap pertanyaan teknis.",
+			"Wulang menggunakan teknologi AI premium (GPT-4, Deepseek) dengan dukungan 24/7. Berlangganan memberi Anda akses ke asisten AI terbaik untuk memastikan kualitas karya ilmiah Anda.",
 		icon: <Users className="w-5 h-5" />,
 	},
 	{
 		id: "satisfaction-guarantee",
-		question: "Apakah ada garansi kepuasan untuk layanan Wulang AI?",
+		question: "Bagaimana cara berlangganan wulang?",
 		answer:
-			"Ya! Kami menyediakan garansi uang kembali 30 hari jika Anda merasa layanan kami tidak sesuai dengan ekspektasi Anda.",
+			"Saat ini Wulang sedang dalam masa promo dan bisa diakses GRATIS! Pilih produk yang Anda inginkan dan mulai gunakan. Nantinya akan tersedia berbagai pilihan paket membership yang bisa disesuaikan dengan kebutuhan Anda.",
 		icon: <Shield className="w-5 h-5" />,
-	},
-	{
-		id: "data-security",
-		question: "Bagaimana keamanan data penelitian saya di Wulang AI?",
-		answer:
-			"Kami menggunakan enkripsi end-to-end dan mematuhi standar keamanan data internasional. Data Anda 100% aman dan confidential.",
-		icon: <Lock className="w-5 h-5" />,
 	},
 ];
 
@@ -48,7 +39,10 @@ export default function FAQ() {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
 
 	return (
-		<section id="faq" className="py-16 md:py-24 overflow-hidden bg-gradient-to-b from-[#F6F6F6] via-[#F8F8F8] to-[#FFFFFF]">
+		<section
+			id="faq"
+			className="py-16 md:py-24 overflow-hidden bg-gradient-to-b from-[#F6F6F6] via-[#F8F8F8] to-[#FFFFFF]"
+		>
 			<div className="container mx-auto px-4 md:px-6">
 				{/* Section Header */}
 				<div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
