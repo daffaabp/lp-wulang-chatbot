@@ -62,7 +62,7 @@ export default function RootLayout({
 				{/* WhatsApp Floating Button */}
 				<div className="fixed bottom-6 right-6 z-50 group">
 					<a
-						href="https://wa.me/6285712208535?text=Hai,%20saya%20ingin%20bertanya%20tentang%20Wulang%20AI"
+						href="https://wa.me/6285712208535?text=Hai,%20wulang%20"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="flex items-center justify-center w-12 h-12 bg-[#128C7E] text-white rounded-full shadow-lg hover:bg-[#075E54] transition-all duration-300"
@@ -73,6 +73,8 @@ export default function RootLayout({
 							viewBox="0 0 24 24"
 							fill="currentColor"
 							className="w-6 h-6"
+							aria-label="Chat on WhatsApp"
+							role="img"
 						>
 							<path
 								fillRule="evenodd"
@@ -85,7 +87,7 @@ export default function RootLayout({
 					<div className="absolute bottom-full right-0 mb-2 pointer-events-none">
 						<div className="bg-gray-900 text-white text-sm px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 							Hubungi Admin untuk informasi lebih lanjut
-							<div className="absolute -bottom-1 right-4 w-2 h-2 bg-gray-900 transform rotate-45"></div>
+							<div className="absolute -bottom-1 right-4 w-2 h-2 bg-gray-900 transform rotate-45" />
 						</div>
 					</div>
 				</div>

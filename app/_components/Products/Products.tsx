@@ -18,91 +18,81 @@ import { useState } from "react";
 
 const products = [
 	{
-		title: "Wulang Chat",
+		title: "Wulang Chatbot",
 		description:
 			"Platform percakapan AI interaktif untuk bantuan penulisan karya ilmiah dengan teknologi NLP canggih.",
 		icon: <MessageSquare className="w-6 h-6" />,
-		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
+		url: "https://chat.kelasinovatif.com/",
 		iconBg: "bg-gradient-to-br from-blue-500 to-indigo-600",
-		price: "1.499K",
 		features: [
-			"Akses penuh ke AI Chat Assistant",
-			"Unlimited chat sessions",
-			"Template penulisan akademik",
-			"Ekspor hasil chat ke Word/PDF",
+			"Upload file untuk analisis & review",
+			"Export hasil ke Word/Excel",
+			"Brainstorming ide penelitian",
+			"Panduan penulisan dari awal sampai akhir",
 		],
 		image: "/images/wulang-chat.PNG",
 	},
 	{
 		title: "Wulang Asisten",
 		description:
-			"Suite tools AI untuk membantu dari proposal hingga kerangka tulisan dengan pendekatan komprehensif.",
+			"Wulang asisten berkolaborasi untuk membantu dari proposal, ide judul penelitian, gap riset, metode penelitian dan membuat kerangka tulisan.",
 		icon: <Sparkles className="w-6 h-6" />,
-		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
+		url: "https://tool.kelasinovatif.com/",
 		iconBg: "bg-gradient-to-br from-purple-500 to-pink-600",
-		price: "2.499K",
 		features: [
 			"AI Writing Assistant",
-			"Analisis & saran perbaikan",
+			"Analisis & saran perbaikan", 
 			"Rekomendasi jurnal",
-			"Pemeriksaan plagiarisme",
+			"Perbaikan tata bahasa & kalimat",
 		],
-		image: "/images/wulang-asisten.PNG",
+		image: "/images/wulang-asisten.png",
 	},
 	{
 		title: "Wulang Voice",
 		description:
-			"Interaksi suara intuitif untuk pengalaman penulisan yang lebih natural dan dinamis.",
+			"Anda dapat berinteraksi secara alami dan efisien melalui suara yang menjadikan proses penulisan lebih dinamis dan menyenangkan",
 		icon: <Mic className="w-6 h-6" />,
-		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
+		url: "https://wulang.kelasinovatif.com/",
 		iconBg: "bg-gradient-to-br from-orange-500 to-amber-600",
-		price: "1.999K",
 		features: [
-			"Voice-to-text conversion",
-			"Multi-bahasa support",
-			"Transkripsi otomatis",
-			"Edit hasil transkripsi",
+			"Diskusi interaktif via suara",
+			"Bimbingan penulisan dengan percakapan alami",
+			"Konsultasi karya ilmiah secara lisan",
+			"Tanya jawab seperti berbicara dengan profesor",
 		],
 		image: "/images/wulang-voice.PNG",
 	},
 	{
 		title: "Wulang Writer",
 		description:
-			"Aplikasi AI untuk pembuatan konten akademik dengan cepat dan efisien melalui instruksi sederhana.",
+			"Aplikasi AI untuk pembuatan konten akademik dengan cepat dan efisien melalui instruksi sederhana. (Coming Soon)",
 		icon: <Pen className="w-6 h-6" />,
-		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
+		url: "/",
 		iconBg: "bg-gradient-to-br from-emerald-500 to-teal-600",
-		price: "1.799K",
-		features: [
-			"AI Content Generation",
-			"Grammar & Style Check",
-			"Citation Manager",
-			"Format Otomatis",
-		],
+		comingSoon: true,
 		image: "/images/remove-bg/wulang2.png",
 	},
 	{
 		title: "Wulang Chat WA",
 		description:
-			"Chatbot AI terintegrasi dengan WhatsApp untuk kolaborasi penulisan ilmiah yang lebih mudah dan familiar.",
+			"Chatbot WA berbasis AI yang terintegrasi dengan WhatsApp untuk kolaborasi penulisan ilmiah yang lebih mudah dan familiar.",
 		icon: <Smartphone className="w-6 h-6" />,
-		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
+		url: "https://wa.me/6285700312898?text=Hai,%20wulang%20",
 		iconBg: "bg-gradient-to-br from-green-500 to-emerald-600",
-		price: "999K",
 		features: [
 			"Integrasi WhatsApp",
-			"Quick Response 24/7",
-			"Share & Collaborate",
-			"Export ke Multiple Format",
+			"Quick Response 24/7", 
+			"Konsultasi Karya Ilmiah 24/7",
+			"Ide & Inspirasi Penelitian",
 		],
 		image: "/images/wulang-chatwa.PNG",
 	},
 	{
 		title: "Wulang Office",
 		description:
-			"Aplikasi desktop untuk pengalaman penulisan karya ilmiah yang lebih powerful. (Coming Soon)",
+			"Aplikasi desktop Ms. Word yang terintegrasi dengan Wulang AI untuk pengalaman penulisan karya ilmiah yang lebih powerful. (Coming Soon)",
 		icon: <Monitor className="w-6 h-6" />,
-		url: "https://kelasinovatif.myr.id/pl/kelas-intensif-menguasai-cursor-cara-efektif-meningkatkan-kualitas-penulisan-ilmiah-71329",
+		url: "/",
 		iconBg: "bg-gradient-to-br from-gray-600 to-slate-700",
 		comingSoon: true,
 		image: "/images/wulang-office.PNG",
@@ -143,7 +133,7 @@ function PreviewModal({
 			>
 				{/* Header with Gradient */}
 				<div className="relative bg-gradient-to-r from-[#1E1B4B] to-[#2D2A6B] text-white">
-					<div className="absolute inset-0 bg-[url('/images/pattern-light.svg')] opacity-10"></div>
+					<div className="absolute inset-0 bg-[url('/images/pattern-light.svg')] opacity-10" />
 					<div className="relative flex items-center justify-between p-3">
 						<h3
 							id="modal-title"
@@ -164,7 +154,7 @@ function PreviewModal({
 
 				{/* Image Preview with Gradient Overlay */}
 				<div className="relative aspect-[16/9] bg-gradient-to-b from-gray-50 to-gray-100">
-					<div className="absolute inset-0 bg-[url('/images/pattern-light.svg')] opacity-5"></div>
+					<div className="absolute inset-0 bg-[url('/images/pattern-light.svg')] opacity-5" />
 					<Image
 						src={image}
 						alt={`Preview ${title}`}
@@ -173,8 +163,8 @@ function PreviewModal({
 						sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
 					/>
 					{/* Gradient Overlays */}
-					<div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent"></div>
-					<div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent"></div>
+					<div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent" />
+					<div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent" />
 				</div>
 			</div>
 		</dialog>
@@ -235,7 +225,7 @@ export default function Products() {
 									{/* Description */}
 									<p className="text-[#4B5563] mb-6">{product.description}</p>
 
-									{/* Price & Features or Coming Soon */}
+									{/* Features or Coming Soon */}
 									<div className="flex-grow">
 										{product.comingSoon ? (
 											<div className="flex flex-col items-center justify-center py-4">
@@ -244,25 +234,17 @@ export default function Products() {
 												</span>
 											</div>
 										) : (
-											<>
-												<div className="flex items-baseline gap-1 mb-4">
-													<span className="text-2xl font-bold text-[#1E1B4B]">
-														Rp {product.price}
-													</span>
-													<span className="text-sm text-[#4B5563]">/bulan</span>
-												</div>
-												<ul className="space-y-2">
-													{product.features?.map((feature) => (
-														<li
-															key={feature}
-															className="flex items-center gap-2 text-sm text-[#4B5563]"
-														>
-															<CheckCircle2 className="w-4 h-4 text-[#1E1B4B] flex-shrink-0" />
-															<span>{feature}</span>
-														</li>
-													))}
-												</ul>
-											</>
+											<ul className="space-y-2">
+												{product.features?.map((feature) => (
+													<li
+														key={feature}
+														className="flex items-center gap-2 text-sm text-[#4B5563]"
+													>
+														<CheckCircle2 className="w-4 h-4 text-[#1E1B4B] flex-shrink-0" />
+														<span>{feature}</span>
+													</li>
+												))}
+											</ul>
 										)}
 									</div>
 
@@ -277,9 +259,7 @@ export default function Products() {
 											}`}
 											onClick={(e) => product.comingSoon && e.preventDefault()}
 										>
-											{product.comingSoon
-												? "Coming Soon"
-												: "Mulai Berlangganan"}
+											{product.comingSoon ? "Coming Soon" : "Lihat Detail"}
 										</Link>
 										<button
 											type="button"

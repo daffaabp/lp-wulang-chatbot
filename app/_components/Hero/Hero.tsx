@@ -43,7 +43,7 @@ export default function Hero() {
 						</div>
 						<div>
 							<div className="flex items-baseline gap-1">
-								<span className="text-4xl font-medium text-[#1E1B4B]">89%</span>
+								<span className="text-4xl font-medium text-[#1E1B4B]">95%</span>
 								<span className="text-emerald-500 font-medium">↑</span>
 							</div>
 							<p className="text-gray-600 text-lg font-medium">
