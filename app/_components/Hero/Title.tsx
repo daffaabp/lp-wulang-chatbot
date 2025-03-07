@@ -52,11 +52,6 @@ export default function Title() {
 				<span className={styles.titleText}>surprisingly</span>
 				<span className={`${styles.humanText} ${arimo.className}`}>human</span>
 			</div>
-
-			{/* Button */}
-			<button type="button" className={styles.tryButton}>
-				TRY FOR FREE
-			</button>
 		</div>
 	);
 }
