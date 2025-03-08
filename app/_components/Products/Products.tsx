@@ -25,9 +25,9 @@ const products = [
 		url: "https://chat.kelasinovatif.com/",
 		iconBg: "bg-gradient-to-br from-blue-500 to-indigo-600",
 		features: [
-			"Upload file untuk analisis & review",
-			"Export hasil ke Word/Excel",
 			"Brainstorming ide penelitian",
+			"Review hasil penulisan dalam bentuk Word/Excel",
+			"Upload gambar untuk analisis & review",
 			"Panduan penulisan dari awal sampai akhir",
 		],
 		image: "/images/wulang-chat.PNG",
@@ -50,7 +50,7 @@ const products = [
 	{
 		title: "Wulang Voice",
 		description:
-			"Anda dapat berinteraksi secara alami dan efisien melalui suara yang menjadikan proses penulisan lebih dinamis dan menyenangkan",
+			"Anda dapat berinteraksi secara alami dan efisien melalui suara yang menjadikan pencarian ide penulisan lebih dinamis dan menyenangkan",
 		icon: <Mic className="w-6 h-6" />,
 		url: "https://wulang.kelasinovatif.com/",
 		iconBg: "bg-gradient-to-br from-orange-500 to-amber-600",
