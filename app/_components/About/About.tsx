@@ -23,7 +23,7 @@ const About = () => {
 					</motion.h2>
 
 					<div className="space-y-6">
-						<p className="text-base md:text-lg text-[#2D2B6B]/80 leading-[1.8]">
+						<p className="text-base md:text-lg text-[#2D2B6B]/80 leading-[1.8] text-justify">
 							Wulang AI adalah asisten virtual berbasis kecerdasan buatan yang
 							dirancang khusus untuk membantu penulisan karya ilmiah. Dengan
 							mengintegrasikan teknologi AI terkini seperti GPT-4 dan Deepseek,
@@ -32,7 +32,7 @@ const About = () => {
 							kontekstual.
 						</p>
 
-						<p className="text-base md:text-lg text-[#2D2B6B]/80 leading-[1.8]">
+						<p className="text-base md:text-lg text-[#2D2B6B]/80 leading-[1.8] text-justify">
 							Wulang terlahir dari kebutuhan nyata komunitas Kelas Inovatif -
 							sebuah wadah kolaborasi mahasiswa, dosen, dan peneliti dalam
 							pengembangan karya ilmiah. Melalui pengalaman mendampingi ribuan
