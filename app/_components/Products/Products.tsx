@@ -18,21 +18,6 @@ import { useState } from "react";
 
 const products = [
 	{
-		title: "Wulang Chatbot",
-		description:
-			"Platform percakapan AI interaktif untuk bantuan penulisan karya ilmiah dengan teknologi NLP canggih.",
-		icon: <MessageSquare className="w-6 h-6" />,
-		url: "https://chat.kelasinovatif.com/",
-		iconBg: "bg-gradient-to-br from-blue-500 to-indigo-600",
-		features: [
-			"Brainstorming ide penelitian",
-			"Review hasil penulisan dalam bentuk Word/Excel",
-			"Upload gambar untuk analisis & review",
-			"Panduan penulisan dari awal sampai akhir",
-		],
-		image: "/images/wulang-chat.PNG",
-	},
-	{
 		title: "Wulang Asisten",
 		description:
 			"Wulang asisten berkolaborasi untuk membantu dari proposal, ide judul penelitian, gap riset, metode penelitian dan membuat kerangka tulisan.",
@@ -46,6 +31,21 @@ const products = [
 			"Analisis & saran perbaikan terstruktur",
 		],
 		image: "/images/wulang-asisten.png",
+	},
+	{
+		title: "Wulang Chatbot",
+		description:
+			"Platform percakapan AI interaktif untuk bantuan penulisan karya ilmiah dengan teknologi NLP canggih.",
+		icon: <MessageSquare className="w-6 h-6" />,
+		url: "https://chat.kelasinovatif.com/",
+		iconBg: "bg-gradient-to-br from-blue-500 to-indigo-600",
+		features: [
+			"Brainstorming ide penelitian",
+			"Review hasil penulisan dalam bentuk Word/Excel",
+			"Upload gambar untuk analisis & review",
+			"Panduan penulisan dari awal sampai akhir",
+		],
+		image: "/images/wulang-chat.PNG",
 	},
 	{
 		title: "Wulang Voice",
@@ -71,7 +71,7 @@ const products = [
 		iconBg: "bg-gradient-to-br from-green-500 to-emerald-600",
 		features: [
 			"Integrasi WhatsApp",
-			"Quick Response 24/7", 
+			"Quick Response 24/7",
 			"Konsultasi Karya Ilmiah 24/7",
 			"Ide & Inspirasi Penelitian",
 		],
