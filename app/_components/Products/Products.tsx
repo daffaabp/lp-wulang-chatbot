@@ -40,10 +40,10 @@ const products = [
 		url: "https://tool.kelasinovatif.com/",
 		iconBg: "bg-gradient-to-br from-purple-500 to-pink-600",
 		features: [
-			"AI Writing Assistant",
-			"Analisis & saran perbaikan", 
-			"Rekomendasi jurnal",
-			"Perbaikan tata bahasa & kalimat",
+			"Panduan penelitian step-by-step",
+			"Eksplorasi ide dari umum ke khusus",
+			"Pembentukan kerangka penelitian",
+			"Analisis & saran perbaikan terstruktur",
 		],
 		image: "/images/wulang-asisten.png",
 	},
@@ -63,19 +63,9 @@ const products = [
 		image: "/images/wulang-voice.PNG",
 	},
 	{
-		title: "Wulang Writer",
-		description:
-			"Aplikasi AI untuk pembuatan konten akademik dengan cepat dan efisien melalui instruksi sederhana. (Coming Soon)",
-		icon: <Pen className="w-6 h-6" />,
-		url: "/",
-		iconBg: "bg-gradient-to-br from-emerald-500 to-teal-600",
-		comingSoon: true,
-		image: "/images/remove-bg/wulang2.png",
-	},
-	{
 		title: "Wulang Chat WA",
 		description:
-			"Chatbot WA berbasis AI yang terintegrasi dengan WhatsApp untuk kolaborasi penulisan ilmiah yang lebih mudah dan familiar.",
+			"Asisten penelitian 24/7 yang hadir di WhatsApp Anda, siap membantu brainstorming ide penelitian kapan saja, dimana saja, seperti memiliki customer service pribadi untuk karya ilmiah Anda.",
 		icon: <Smartphone className="w-6 h-6" />,
 		url: "https://wa.me/6285700312898?text=Hai,%20wulang%20",
 		iconBg: "bg-gradient-to-br from-green-500 to-emerald-600",
@@ -86,6 +76,16 @@ const products = [
 			"Ide & Inspirasi Penelitian",
 		],
 		image: "/images/wulang-chatwa.PNG",
+	},
+	{
+		title: "Wulang Writer",
+		description:
+			"Aplikasi AI untuk pembuatan konten akademik dengan cepat dan efisien melalui instruksi sederhana. (Coming Soon)",
+		icon: <Pen className="w-6 h-6" />,
+		url: "/",
+		iconBg: "bg-gradient-to-br from-emerald-500 to-teal-600",
+		comingSoon: true,
+		image: "/images/remove-bg/wulang2.png",
 	},
 	{
 		title: "Wulang Office",
