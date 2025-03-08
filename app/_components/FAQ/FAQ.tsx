@@ -13,32 +13,32 @@ import { useState } from "react";
 
 const faqs = [
 	{
-		id: "mastery-time",
-		question: "Bagaimana cara menggunakan wulang?",
-		answer:
-			"Sangat mudah! Pilih platform yang Anda inginkan (Chat, Voice, atau WhatsApp), dan langsung mulai interaksi. Tidak perlu instalasi, dalam 5 menit Anda sudah bisa menulis dengan bantuan AI!",
-		icon: <Clock className="w-5 h-5" />,
-	},
-	{
-		id: "journal-recommendation",
-		question: "Apakah wulang menyimpan history chat?",
-		answer:
-			"Yap! Semua percakapan tersimpan dengan aman di sistem kami dan dapat Anda akses kembali kapan saja untuk melanjutkan diskusi sebelumnya.",
-		icon: <Globe className="w-5 h-5" />,
-	},
-	{
-		id: "technical-support",
-		question: "Kenapa wulang berbayar?",
-		answer:
-			"Wulang menggunakan teknologi AI premium (GPT-4, Deepseek) dengan dukungan 24/7. Berlangganan memberi Anda akses ke asisten AI terbaik untuk memastikan kualitas karya ilmiah Anda.",
-		icon: <Users className="w-5 h-5" />,
-	},
-	{
 		id: "satisfaction-guarantee",
 		question: "Bagaimana cara berlangganan wulang?",
 		answer:
 			"Saat ini Wulang sedang dalam masa promo dan bisa diakses GRATIS! Pilih produk yang Anda inginkan dan mulai gunakan. Namun nantinya akan tersedia berbagai pilihan paket membership yang bisa disesuaikan dengan kebutuhan Anda.",
 		icon: <Shield className="w-5 h-5" />,
+	},
+	{
+		id: "mastery-time",
+		question: "Bagaimana cara menggunakan Wulang?",
+		answer:
+			"Sangat mudah! Pilih platform yang Anda inginkan (Chat, Asisten, Voice, atau lainnya), dan langsung mulai interaksi. Dalam waktu singkat Anda sudah bisa menulis karya ilmiah dengan bantuan AI!",
+		icon: <Clock className="w-5 h-5" />,
+	},
+	{
+		id: "journal-recommendation",
+		question: "Apakah Wulang ChatBot menyimpan history?",
+		answer:
+			"Yap! Semua percakapan tersimpan dengan aman di dalam aplikasi Wulang ChatBot dan dapat Anda akses kembali kapan saja untuk melanjutkan diskusi sebelumnya.",
+		icon: <Globe className="w-5 h-5" />,
+	},
+	{
+		id: "product-selection",
+		question: "Bagaimana cara memilih produk Wulang yang sesuai kebutuhan Anda?",
+		answer:
+			"Pilih Wulang Chatbot untuk penulisan komprehensif, Wulang Asisten untuk panduan terstruktur, Wulang Voice untuk diskusi dinamis, atau Wulang Chat WA untuk konsultasi instan via WhatsApp. Setiap produk dirancang untuk pengalaman yang berbeda sesuai gaya kerja Anda.",
+		icon: <Users className="w-5 h-5" />,
 	},
 	{
 		id: "unique-features",
